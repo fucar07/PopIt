@@ -1410,7 +1410,6 @@ self.C3_ExpressionFuncs = [
 		() => -15,
 		() => 0,
 		() => "Başlangıç",
-		() => 5,
 		() => "kelimeler",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1420,10 +1419,8 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => 9,
 		() => "Sistem",
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
+		() => -300,
+		() => 2,
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -1458,10 +1455,25 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
 		() => " ",
 		() => 0.2,
-		() => 2,
 		() => 0.5,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() / 2);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject();
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 400);
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
@@ -1472,11 +1484,8 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 6,
 		() => "size",
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject();
-		},
 		() => 72,
+		() => 5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const n1 = p._GetNode(1);
@@ -1524,6 +1533,7 @@ self.C3_ExpressionFuncs = [
 			return () => (n0.ExpObject() + 80);
 		},
 		() => 0.3,
+		() => 10,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 50);
