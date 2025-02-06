@@ -1410,6 +1410,7 @@ self.C3_ExpressionFuncs = [
 		() => -15,
 		() => 0,
 		() => "Başlangıç",
+		() => 5,
 		() => "kelimeler",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1419,7 +1420,10 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => 9,
 		() => "Sistem",
-		() => 5,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
@@ -1454,20 +1458,17 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpInstVar();
 		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
 		() => " ",
 		() => 0.2,
+		() => 2,
 		() => 0.5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
 			const f2 = p._GetNode(2).GetBoundMethod();
-			const f3 = p._GetNode(3).GetBoundMethod();
+			const v3 = p._GetNode(3).GetVar();
 			const v4 = p._GetNode(4).GetVar();
-			return () => f0(v1.GetValue(), f2(f3(v4.GetValue(), "")), "");
+			return () => f0(v1.GetValue(), f2(v3.GetValue(), (v4.GetValue() + 4)), "");
 		},
 		() => 6,
 		() => "size",
@@ -1483,9 +1484,9 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(1200, 1920);
+			return () => f0(1500, 2000);
 		},
-		() => -155,
+		() => -150,
 		() => 8,
 		p => {
 			const n0 = p._GetNode(0);
@@ -1502,7 +1503,7 @@ self.C3_ExpressionFuncs = [
 			const v2 = p._GetNode(2).GetVar();
 			const n3 = p._GetNode(3);
 			const f4 = p._GetNode(4).GetBoundMethod();
-			return () => (((f0() - (83 * f1(v2.GetValue(), ""))) / 2) + ((n3.ExpObject() + 90) * f4()));
+			return () => ((((f0() - (83 * f1(v2.GetValue(), ""))) / 2) + ((n3.ExpObject() + 88) * f4())) - 30);
 		},
 		() => 1000,
 		p => {
@@ -1515,14 +1516,19 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (0.3 * f0());
 		},
-		() => 2,
+		() => "cizgi",
 		() => "Balon Tıklanınca",
+		() => "Animation 2",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 80);
+		},
+		() => 0.3,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 50);
 		},
 		() => "Animation 1",
-		() => "Animation 2",
 		() => 960,
 		() => 540,
 		() => 1920,
