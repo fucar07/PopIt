@@ -1419,7 +1419,10 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => 9,
 		() => "Sistem",
+		() => 8,
 		() => -300,
+		() => 10,
+		() => -100,
 		() => 2,
 		p => {
 			const n0 = p._GetNode(0);
@@ -1466,6 +1469,7 @@ self.C3_ExpressionFuncs = [
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => (f0() / 2);
 		},
+		() => 50,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
@@ -1496,7 +1500,6 @@ self.C3_ExpressionFuncs = [
 			return () => f0(1500, 2000);
 		},
 		() => -150,
-		() => 8,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpBehavior("size");
@@ -1533,7 +1536,6 @@ self.C3_ExpressionFuncs = [
 			return () => (n0.ExpObject() + 80);
 		},
 		() => 0.3,
-		() => 10,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 50);
