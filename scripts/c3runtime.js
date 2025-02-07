@@ -1419,7 +1419,6 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => 9,
 		() => "Sistem",
-		() => 8,
 		() => -300,
 		() => 10,
 		() => -100,
@@ -1500,6 +1499,7 @@ self.C3_ExpressionFuncs = [
 			return () => f0(1500, 2000);
 		},
 		() => -150,
+		() => 8,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => n0.ExpBehavior("size");
