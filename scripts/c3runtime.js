@@ -1407,7 +1407,7 @@ self.C3_ExpressionFuncs = [
 		() => 100,
 		() => 99,
 		() => "fon",
-		() => -15,
+		() => -10,
 		() => 0,
 		() => "Başlangıç",
 		() => "kelimeler",
@@ -1446,6 +1446,11 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
 			return () => f0(n1.ExpObject(0, n2.ExpObject()), "");
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			const n1 = p._GetNode(1);
+			return () => n0.ExpObject(2, n1.ExpObject());
 		},
 		() => "Balon ve Harfler",
 		p => {
@@ -1544,7 +1549,8 @@ self.C3_ExpressionFuncs = [
 		() => 540,
 		() => 1920,
 		() => 1080,
-		() => 1.5
+		() => 1.5,
+		() => "bitis"
 ];
 
 

@@ -58,6 +58,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Cnds.PickAll,
+		C3.Plugins.Audio.Acts.PlayByName,
 		C3.Plugins.System.Exps.layoutwidth,
 		C3.Plugins.System.Exps.layoutheight,
 		C3.Plugins.Sprite.Exps.X,
@@ -87,7 +88,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Audio.Acts.SetPaused,
 		C3.Plugins.System.Cnds.EveryTick,
-		C3.Plugins.System.Acts.ResetGlobals
+		C3.Plugins.System.Acts.ResetGlobals,
+		C3.Plugins.Audio.Acts.Stop
 	];
 };
 self.C3_JsPropNameTable = [
@@ -141,6 +143,7 @@ self.C3_JsPropNameTable = [
 	{rastgeleHarflerKelime: 0},
 	{harfSayisi: 0},
 	{tiklanabilir: 0},
+	{secilenKelime: 0},
 	{kelime: 0},
 	{musicDurum: 0}
 ];
